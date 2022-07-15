@@ -4,12 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tasks")
-public class Task {
+class Task {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String description;
     private boolean done;
+
+    public Task() {
+    }
 
     public int getId() {
         return id;
